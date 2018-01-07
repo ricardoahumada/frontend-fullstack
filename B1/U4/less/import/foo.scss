@@ -1,0 +1,35 @@
+$primarycolor: yellow;
+$color:#800080;
+
+h1 {
+   color: $primarycolor;
+}
+
+h3 {
+   color: $color;
+}
+
+button{
+  background:$primarycolor;
+}
+
+.verde{
+  background: green;
+}
+
+@mixin bordered($border:1px) {
+  border-top: dotted $border black;
+  border-bottom: solid $border black;
+}
+
+#menu a {
+  color: #111;
+  @include bordered();
+}
+
+.post a {
+  @extend .verde;
+  color: red;
+  @include bordered(5px);
+}
+

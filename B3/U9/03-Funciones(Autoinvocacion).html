@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        // Funciones de auto-invocación
+        //(function leerContador(valor) {
+        //    var i = valor + 1;
+        //    return alert(i);
+        //})(5);
+
+        //leerContador(3);  // no puede acceder: leerContador no existe
+
+        var otroContador = (function leerContador2(valor) {
+            var i = valor + 1;
+            return alert(i);
+        })(2);
+
+        //otroContador(4);  // Falla. El valor asignado a otroContador es undefined
+        //leerContador2(7); // leerContador2 sigue siendo inaccesible
+
+
+    </script>
+</body>
+</html>

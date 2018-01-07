@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Demos de BootStrap</title>
+    <!-- La funcionalidad básica solo requiere de fichero de estilos -->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Este simple h1 muestra capacidades responsive-->
+    <div class="container">
+        <div class="row">
+            <div class="span12" style="background-color:aqua;">
+                <h1>Rejilla Visual</h1>
+            </div>
+        </div>
+        <!-- Apilar columnas en el móvil haciendo una tipo "full-width" y la otra "half-width" -->
+        <div class="row">
+            <div class="col-xs-12 col-md-8" style="background-color:aqua;">.col-xs-12 .col-md-8</div>
+            <div class="col-xs-6 col-md-4" style="background-color:#ffd800;">.col-xs-6 .col-md-4</div>
+        </div>
+
+        <!-- Columnas que empiezan al 50% ancho en el movil se cambian a 33.3% en el escritorio-->
+        <div class="row">
+            <div class="col-xs-6 col-md-4" style="background-color:#ff6a00;">.col-xs-6 .col-md-4</div>
+            <div class="col-xs-6 col-md-4" style="background-color:#4cff00;">.col-xs-6 .col-md-4</div>
+            <div class="col-xs-6 col-md-4" style="background-color:#0094ff;">.col-xs-6 .col-md-4</div>
+        </div>
+
+        <!-- Columnas al 50% en todos los casos -->
+        <div class="row">
+            <div class="col-xs-6" style="background-color:#ff0000;">.col-xs-6</div>
+            <div class="col-xs-6" style="background-color:#808080;">.col-xs-6</div>
+        </div>
+    </div>
+
+</body>
+</html>

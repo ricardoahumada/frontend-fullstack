@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Demos de BootStrap</title>
+    <!-- La funcionalidad básica solo requiere de fichero de estilos -->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        .row > div {
+            background-color: aqua;
+        }
+
+        div:nth-child(2n) {
+            background-color: #ff6a00;
+        }
+
+        div:only-child {
+            background-color: #ffd800;
+        }
+    </style>
+</head>
+<body>
+    <!--Este simple h1 muestra capacidades responsive-->
+    <div class="container">
+        <div class="row" style="background-color:ActiveCaption">
+            <div class="span12">
+                <h1>Rejilla Visual</h1>
+            </div>
+        </div>
+        <!-- Desplazamiento de columnas -->
+        <div class="row">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+            <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+        </div>
+    </div>
+    <!-- Columnas anidadas-->
+    <div class="container">
+
+        <div class="row" style="background-color:ActiveCaption; margin-top:30px">
+            <div class="col-sm-9">
+                Nivel 1: .col-sm-9
+                <div class="row">
+                    <div class="col-xs-8 col-sm-6">
+                        Nivel 2: .col-xs-8 .col-sm-6
+                    </div>
+                    <div class="col-xs-4 col-sm-6">
+                        Nivel 2: .col-xs-4 .col-sm-6
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fin del contenedor-->
+    </div>
+
+    <!-- Cambio de orden de Columnas -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
+            <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-pull-9</div>
+        </div>
+    </div>
+</body>
+</html>

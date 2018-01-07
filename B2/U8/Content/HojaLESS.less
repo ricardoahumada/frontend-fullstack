@@ -1,0 +1,83 @@
+﻿@base: #f04615;
+@width: 0.5;
+
+.class {
+  width: percentage(@width); // devuelve `50%`
+  color: saturate(@base, 5%);
+  background-color: spin(lighten(@base, 25%), 8);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@base: 5%;
+@filler: @base * 2;
+@other: @base + @filler;
+@base-color: #333;
+
+#Selector {
+color: #888/4;
+background-color: @base-color + #111;
+height: 100% / 2 + @filler;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.screencolor{
+  @media screen {
+    color: green;
+    @media (min-width:768px) {
+    color: red;
+    }
+    }
+  @media tv {
+    color: black;
+  }
+}
+
+
+
+
+#header {
+  color: black;
+  .navigation {
+    font-size: 12px;
+  }
+  .logo {
+    width: 300px;
+  }
+}
+
+
+
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+}
+ 
+#header {
+  .rounded-corners;
+}
+#footer {
+  .rounded-corners(10px);
+}
+

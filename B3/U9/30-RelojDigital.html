@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Reloj Digital</title>
+    <link href="Estilos/Hoja.css" rel="stylesheet" />
+    <script>
+        // Función para mostrar la hora
+        function displayTime() {
+            var elt = document.getElementById("reloj");
+            var now = new Date(); // hora actual
+            elt.innerHTML = now.toLocaleTimeString(); // mostrarla en el elemento
+            setTimeout(displayTime, 1000); // Ejecutarlo cada segundo
+        }
+        window.onload = displayTime; // Mostrar la hora en la carga del documento
+    </script>
+    <style>
+        /* Estilo del reloj */
+        #reloj
+        {
+            font: bold 24pt sans;
+            background: #ddf;
+            padding: 10px;
+            border: solid black 2px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reloj Digital</h1>
+    <h3>Utiliza setTimeout</h3>
+    <!-- Mostrar Título -->
+    <span id="reloj"></span>
+    <!-- Mostrar la hora cada segundo -->
+    <!-- Otra forma de mostrar la hora (destruye/recrea el DOM)-->
+    <a href="javascript:new Date().toLocaleTimeString();">¿Qué hora es?</a>
+</body>
+</html>

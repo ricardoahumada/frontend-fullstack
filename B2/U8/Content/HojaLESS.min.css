@@ -1,0 +1,1 @@
+﻿#Selector{color:#222;background-color:#444;height:60%}@media screen{.screencolor{color:green}}@media screen and (min-width:768px){.screencolor{color:red}}@media tv{.screencolor{color:#000}}#header{color:#000}#header .navigation{font-size:12px}#header .logo{width:300px}#header{border-radius:5px}#footer{border-radius:10px}

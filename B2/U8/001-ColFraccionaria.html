@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Demos de BootStrap</title>
+    <!-- La funcionalidad básica solo requiere de fichero de estilos -->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <h2 id="modo">Modo actual</h2>
+    <!--Este simple h1 muestra capacidades responsive-->
+    <div class="container">
+        <div class="row">
+            <div class="span2" style="background-color:aqua;">
+                <h1>Rejilla Visual</h1>
+            </div>
+        </div>
+    </div>
+    <!--División fraccionaria de columnas-->
+    <div class="container-fluid">
+        <div class="row" style="background-color:azure;">
+            <div class="col-md-1">.col-md-1</div>
+            <div class="col-md-1">.col-md-1</div>
+            <div class="col-md-1">.col-md-1</div>
+            <div class="col-md-1">.col-md-1</div>
+            <div class="col-md-1">.col-md-1</div>
+            <div class="col-md-1">.col-md-1</div>
+            <div class="col-md-1">.col-md-1</div>
+            <div class="col-md-1">.col-md-1</div>
+            <div class="col-md-1">.col-md-1</div>
+            <div class="col-md-1">.col-md-1</div>
+            <div class="col-md-1">.col-md-1</div>
+            <div class="col-md-1">.col-md-1</div>
+        </div>
+        <div class="row" >
+            <div class="col-md-8" style="background-color:azure;">.col-md-8</div>
+            <div class="col-md-4" style="background-color:#ffd800;">.col-md-4</div>
+        </div>
+        <div class="row" >
+            <div class="col-md-4" style="background-color:aqua;">.col-md-4</div>
+            <div class="col-md-4" style="background-color:#b6ff00;">.col-md-4</div>
+            <div class="col-md-4" style="background-color:#e4c0dd;">.col-md-4</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6" style="background-color:#ffd800;">.col-md-6</div>
+            <div class="col-md-6" style="background-color:#cbc587;">.col-md-6</div>
+        </div>
+
+    </div>
+    <script src="Scripts/jquery-1.11.2.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script>
+        $(window).bind("resize", function() {
+            if ($(window).width() < 768) {
+                // extra small
+                $("#modo").text("Modo activo: Extra Small");
+            }
+            else if ($(window).width() > 768 && $(window).width() <= 992) {
+                // small
+                $("#modo").text("Modo activo: Small");
+            }
+            else if ($(window).width() > 992 && $(window).width() <= 1200) {
+                // medias
+                $("#modo").text("Modo activo: Medium");
+            }
+            else {
+                // grandes
+                $("#modo").text("Modo activo: Large");
+            }
+        });
+    </script>
+</body>
+</html>

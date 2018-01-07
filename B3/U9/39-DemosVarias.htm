@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Demo2</title>
+    <link href="Estilos/Hoja.css" rel="stylesheet" />
+    <script type="text/javascript" >
+
+        window.onload = function () {
+            alert("Esto se ejecuta al cargar la página en primer lugar");
+        };
+
+        document.write("Propiedades predeterminadas de Location" + "<HR/>");
+        document.write(window.location.host + "<HR/>");
+        document.write(window.location.hostname + "<HR/>");
+        document.write(window.location.pathname + "<HR/>");
+        document.write(window.location.port + "<HR/>");
+        document.write(window.location.href + "<HR/>");
+        
+
+        function Saludar() {
+            alert("Esto es un saludo desde una función");
+        }
+    
+        function holaMundo() { alert('Hola mundo.'); }
+        //boton.removeEventListener('click', holaMundo, false); 
+
+        var boton = document.getElementById('boton');
+        boton.addEventListener('click', holaMundo, false);
+        document.forms[0].boton.value = "Nuevo valor de botón";
+
+    </script>
+</head>
+<body>
+    <h2>Demos variadas de uso de eventos y manipulación del DOM</h2>
+    <form action="#" id="Formulario">
+    <input type="text" />
+    <input type="button" value="Lanzador de Evento Click" 
+        onclick="window.alert('Pulsado el botón');" />
+    <input type="button" value="Lanzador Función" 
+        onclick="Saludar();" />
+    <input type="button" value="Pulsa (Dinámico)" id="boton" />
+    <input type="checkbox" />
+    <input type="radio" />
+    <input type="button" value="Cambiar Texto" 
+           onclick="Ancla.innerHTML = 'Pulse para ir a la imagen de un perro estudioso'; alert('Texto cambiado');" />
+    </form>
+
+
+    <img src="http://www.google.es/images/srpr/logo3w.png" />
+    <img src="Graficos/1.jpg" alt="Perro estudiando" title="Perro Basset Estudiando profundamente"
+        width="200" height="200" />
+    <a id="Ancla" href="#ImagenCray">Pulse para ir a la imagen de un Cray</a>
+    <br />
+    <br />
+    <img src="Graficos/2.jpg" alt="Perro estudiando" title="Perro Basset Estudiando profundamente" /><br />
+    <br />
+    <br />
+    <br />
+    <p>Texto intermedio</p>
+    <p>Texto intermedio</p>
+    <p>Texto intermedio</p>
+    <a id="ImagenCray">
+        <img src="Graficos/3.jpg" alt="Perro estudiando" 
+            title="Perro Basset Estudiando profundamente" />
+    </a>
+    <p>Texto intermedio</p>
+    <p>Texto intermedio</p>    
+</body>
+</html>

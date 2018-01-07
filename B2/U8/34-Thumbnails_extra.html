@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        body {
+            font-size: 1.1em;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Imágenes (Thumbnails)</h1>
+    <h3 id="modo">Modo activo:</h3>
+    <h3>También podemos añadir contenido HTML al bloque del Thumbnail</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    <img src="http://lorempixel.com/business/400/250" alt="foto">
+                    <div class="caption">
+                        <h3>Etiqueta del Thumbnail</h3>
+                        <p>Texto descriptivo de la foto</p>
+                        <p>
+                            <a href="#" class="btn btn-primary" role="button">Acción 1</a>
+                            <a href="#" class="btn btn-default" role="button">Acción 2</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="Scripts/jquery-1.11.2.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script>
+        $(window).bind("resize", function () {
+            if ($(window).width() < 768) {
+                // extra small
+                $("#modo").text("Modo activo: Extra Small");
+            }
+            else if ($(window).width() > 768 && $(window).width() <= 992) {
+                // small
+                $("#modo").text("Modo activo: Small");
+            }
+            else if ($(window).width() > 992 && $(window).width() <= 1200) {
+                // medias
+                $("#modo").text("Modo activo: Medium");
+            }
+            else {
+                // grandes
+                $("#modo").text("Modo activo: Large");
+            }
+        });
+
+    </script>
+</body>
+</html>

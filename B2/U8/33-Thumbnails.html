@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        body { font-size:1.1em; margin:10px;}
+    </style>
+</head>
+<body>
+    <h1>Imágenes</h1>
+    <h3 id="modo">Modo activo:</h3>
+    <h3>Sirve, además para comprobar cómo afecta la definición de columnas al tamaño final de los gráficos</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3 col-sm-4 col-md-6 col-lg-1">
+                <img src="Graficos/isa06_9.jpg" class="img-thumbnail" />
+                <a href="#" class="thumbnail">
+                    <img src="http://lorempixel.com/300/200" />
+                </a>
+                <a href="#" class="thumbnail">
+                    <img src="http://lorempixel.com/sports/300/200" />
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 col-md-4">
+                <a href="#" class="thumbnail">
+                    <img src="http://lorempixel.com/400/250" />
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-4">
+                <a href="#" class="thumbnail">
+                    <img src="http://lorempixel.com/400/250" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-1.11.2.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script>
+        $(window).bind("resize", function() {
+            if ($(window).width() < 768) {
+                // extra small
+                $("#modo").text("Modo activo: Extra Small");
+            }
+            else if ($(window).width() > 768 && $(window).width() <= 992) {
+                // small
+                $("#modo").text("Modo activo: Small");
+            }
+            else if ($(window).width() > 992 && $(window).width() <= 1200) {
+                // medias
+                $("#modo").text("Modo activo: Medium");
+            }
+            else {
+                // grandes
+                $("#modo").text("Modo activo: Large");
+            }
+        });
+
+        // Esto usa la librería ResponsiveBootstrapToolkit
+        (function ($, viewport) {
+
+            // Menor resolución
+            if (viewport.is('xs')) {
+                // ...
+            }
+
+            // Lo mismo, cada vez que se cargue el documento
+            $(document).ready(function () {
+                if (viewport.is('xs')) {
+                    // ...
+                }
+            });
+
+            // Ejecutar cuando cambie el tamaño
+            $(window).bind('resize', function () {
+                viewport.changed(function () {
+                    if (viewport.is('xs')) {
+                        // ...
+                    }
+                });
+            });
+
+        })(jQuery, ResponsiveBootstrapToolkit);
+    </script>
+</body>
+</html>

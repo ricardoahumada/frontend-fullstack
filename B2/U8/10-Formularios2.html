@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Manejo de Tablas</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style>
+    </style>
+</head>
+<body>
+
+    <h2>Uso de formularios alineados</h2>
+    <hr />
+    <div class="container">
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <label class="sr-only" for="entradaCorreo2">Dirección de correo</label>
+                <input type="email" class="form-control" id="entradaCorreo2" placeholder="Dirección de correo">
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">@</div>
+                    <input class="form-control" type="email" placeholder="Introduzca un correo">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="sr-only" for="entradaContraseña">Password</label>
+                <input type="password" class="form-control" id="entradaContraseña" placeholder="Password">
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> Recuérdame
+                </label>
+            </div>
+            <button type="submit" class="btn btn-default">Entrar</button>
+        </form>
+
+        <hr />
+
+        <div class="input-group">
+            <span class="input-group-addon" >@</span>
+            <input type="text" class="form-control" placeholder="Usuario" aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Destinatario" >
+            <span class="input-group-addon" >@example.com</span>
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-addon">€</span>
+            <input type="text" class="form-control" aria-label="Cantidad (redondeada en euros)">
+            <span class="input-group-addon">.00</span>
+        </div>
+
+    </div>
+</body>
+</html>

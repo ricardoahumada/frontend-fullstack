@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.11.2.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <!--<script src="Scripts/bootstrap.js"></script>
+-->
+</head>
+<body>
+<h1>Tabuladores, Etiquetas flotantes y PopOvers</h1>
+<div class="container">
+    <!-- Tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#home" role="tab" data-toggle="tab">Inicio</a>
+        </li>
+        <li>
+            <a href="#profile" role="tab" data-toggle="tab">Perfil</a>
+        </li>
+        <li>
+            <a href="#messages" role="tab" data-toggle="tab">Mensajes</a>
+        </li>
+        <li>
+            <a href="#settings" role="tab" data-toggle="tab">Otros</a>
+        </li>
+    </ul>
+
+    <!-- Tab Paneles -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="home">
+            Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+        </div>
+        <div class="tab-pane" id="profile">
+            Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                Placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante.
+        </div>
+        <div class="tab-pane" id="messages">
+            Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+                Placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante.
+                Fusce non varius purus aenean nec magna felis fusce vestibulum velit mollis odio sollicitudin lacinia aliquam posuere, sapien elementum lobortis tincidunt, turpis dui ornare nisl, sollicitudin interdum turpis nunc eget.
+        </div>
+        <div class="tab-pane" id="settings">Otro texto</div>
+    </div>
+    <hr />
+    <!--Etiquetas-->
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
+
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+    <hr />
+
+    <!--PopOvers-->
+    <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
+    <hr />
+    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover on left</button>
+
+    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover on top</button>
+
+    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">Popover on bottom</button>
+
+    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Popover on right</button>
+    <script>
+        // Esto no está en la documentación
+        // $(function () { 
+        //     $("[data-toggle='tooltip']").tooltip(); 
+        // });
+
+        // Alternativa (tampoco documentada)
+        // Tienen que hacerse después de cargar el DOM
+        $( document ).ready(function () { 
+            // Habilita los tooltip en bootstrap 3 
+            $("[data-toggle='tooltip']").tooltip({html: true}); 
+            // Habilita los "popover"
+            $('[data-toggle="popover"]').popover({
+                trigger: 'hover',
+                'placement': $(this).attr('data-placement'),
+                'show': true
+            });
+        });
+
+    </script>
+</div>
+</body>
+</html>

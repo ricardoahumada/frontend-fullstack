@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Efectos básicos sobre el DOM</title>
+    <style>
+        body {
+            font-family:"Segoe UI";
+        }
+    </style>
+</head>
+<body>
+    <!-- Efecto de cambio de gráfico -->
+    <h2>Demo de gráficos manipulados mediante atributos data-*</h2>
+    <!-- <script>(new Image()).src = "Graficos/Chart.png";</script>-->
+    <img src="Graficos/Chart.png" 
+        onmousemove="this.src='Graficos/Cancel.png'" 
+        onmouseout="this.src='Graficos/Chart.png'" />
+
+    <h3>Demo de imágenes alternativas mediante los eventos mousemove y 
+        mouseout. <mark>Utiliza los nuevos atributos de usuario data-*</mark> 
+    </h3>
+    <p>Se deben crear varias imágenes con y sin imagen alternativa</p>
+    <img src="Graficos/Desktop%20Alt.png" />
+    <img src="Graficos/FavoritesAdd.png" data-rollover="Graficos/FavoritesRemove.png" />
+    <img src="Graficos/Document.png" data-rollover="Graficos/Delete.png" />
+    <img src="Graficos/Desktop.png" />
+    <img src="Graficos/BallBlue.png" data-rollover="Graficos/BallYellow.png" />
+    <script>
+        // Código que crea una imagen alternativa para TODOS los
+        // elementos <img> de un documento. Utiliza el nuevo atributo 
+        // data- para recuperar la definición alternativa de cada <img>
+        /**
+        * <img src="imagen.png" data-rollover="imagen_alternativa.png">
+        */
+        window.onload = (function () { // Todo es una función anónima: no se definen símbolos
+            // se recorren todas las imágenes buscando el atributo data-rollover 
+            for (var i = 0; i < document.images.length; i++) {
+                var img = document.images[i];
+                var rollover = img.getAttribute("data-rollover");
+                if (!rollover) continue; // Se salta las imagenes sin atrib. data-rollover
+                // Garantiza que el "rollover" está en cache
+                (new Image()).src = rollover;
+                // Define un atributo para recordar la URL de la imagen 
+                img.setAttribute("data-rollout", img.src);
+                // Registra los manejadores de evento que crean el efecto
+                img.onmouseover = function () {
+                    this.src = this.getAttribute("data-rollover");
+                };
+                img.onmouseout = function () {
+                    this.src = this.getAttribute("data-rollout");
+                };
+            }
+        });
+
+    </script>
+</body>
+</html>

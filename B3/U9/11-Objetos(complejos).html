@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Problemas en JS -Parte 1</title>
+    <link href="Estilos/Hoja.css" rel="stylesheet" />
+</head>
+<body>
+    <h1 id="Titulo">Demos de JavaScript</h1>
+    <p id="SubTitulo">Algunos aspectos de la creación, declaración y uso de objetos en JavaScript</p>
+
+    <script>
+        // Problema inicial
+        // Enumerar sintaxis variadas para la creación de objetos 
+        var vacio = {}; // Un objeto sin propiedades
+        var punto = { x:0, y:0 }; // Dos propiedades
+        var punto2 = { x:punto.x, y:punto.y+1 }; // Valores más complejos
+        var libro = {
+            "Titulo Principal": "HTML5", // Los nombres de las propiedades incluyen espacios,
+            'Sub-Titulo': "CSS3 y JavaScript", // y guiones, así que usamos literales de cadena
+            "for": "todas las audiencias", // for es palabra reservada, => entre comillas
+            autor: { // El valor de esta propiedad, es -en sí mismo- 
+                nombre: "Marino", // un objeto. Notar que
+                apellidos: "Posadas" // los nombres de propiedades no van entre comillas.
+            }
+        };
+
+        //alert(libro.autor.apellidos);
+
+        var libro2 = {
+            "Titulo Principal": "HTML5", // Los nombres de las propiedades incluyen espacios,
+            'Sub-Titulo': "CSS3 y JavaScript", // y guiones, así que usamos literales de cadena
+            "for": "todas las audiencias", // for es palabra reservada, => entre comillas
+            autor: { // El valor de esta propiedad, es -en sí mismo- 
+                nombre: "Marino", // un objeto. Notar que
+                apellidos: "Posadas" // los nombres de propiedades no van entre comillas.
+            },
+            Fecha: new Date(2013, 0, 9).toLocaleDateString(),  // Se llama al constructor de Date
+            mostrarSub: function () { return this['Sub-Titulo']; }, //sintaxis de array para acceder 
+            mostrarTitulo: function () { alert(this['Titulo Principal'] + " - " + this.Fecha); }
+        };
+
+        libro2.mostrarTitulo();
+
+        var mostrador = {
+            mostrar: function (o) {
+                var propiedades = "";
+                for (var p in o) {
+                    propiedades += p + "\n";
+                }
+                return propiedades;
+            }
+        }
+        
+        alert(mostrador.mostrar(libro2));
+
+        // Problema 
+        // asignar eventos del objeto principal
+        window.onload = function() {
+            libro2.mostrarTitulo();
+        }
+
+        // Problema: asignar el evento mouseover al título
+        document.getElementById('Titulo').addEventListener('mouseover',
+            function () {
+                alert('Pasando por el título');
+            });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+@mixin clase_pepito($lucas: 5px,$andy: 2px) {
+	-webkit-border-radius: $lucas;
+	-moz-border-radius: $lucas;
+	border-radius: $lucas;
+  font-size: $andy;
+}
+
+#header {
+	@include clase_pepito();
+}
+
+div {
+	@include clase_pepito(6px,20px);
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+body{padding: 0; margin: 0; font-size: 20px;font-family: arial;}
+
+header div > img{width: 100px; height: 100px;border:1px solid red;display: inline-block;}
+header div, header nav{display: inline-block;}
+header nav button{display: none;}
+header nav ul>li{display: inline-block;border:1px solid red;background: red; color:white;}
+header nav ul>li a {color:white;text-decoration: none;}
+
+section{padding: 1em;}
+section article{border:1px solid red;margin: 2em;padding: 0,5em;}
+section article div{display: inline-block;}
+section article p{display: inline-block;width: 60%;vertical-align: top;}
+section article div>img {width: 200px; height: 200px; display: inline-block;background: red;}
+
+@media print{
+	body{font-size: 0.5em;color:darkgray;}
+	header nav ul>li{border-color: blue; background:blue; }
+}
+
+@media screen and (max-width:370px) {
+	body{font-size: 2em;}
+	img{display: none !important;}
+	header nav{position: relative;font-size: 0.5em;}
+	header nav button{display: block;}
+	header nav:hover > ul{display: block;position: absolute;top:10px;left: -40px;}
+	header nav ul{display: none;}
+	header nav ul li{display: inline-block;width: 200px;}
+	section article p{width: 100%;}
+}
+
+@media screen and (min-width:371px) and (max-width:640px) {
+	body{font-size: 1.2em;}
+	img{display: none !important;}
+	section article p{width: 100%;}
+}

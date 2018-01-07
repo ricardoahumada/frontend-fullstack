@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        // Closures
+        // Se consigue persistir el valor definido en la función 
+        // mediante la técnica de devolver otra función, que 
+        // -debido al "hoisting" puede acceder a las variables 
+        // definidas por la función contenedora.
+        // Al devolverse la función es como si se devolviera
+        // un contexto, que no puede ser destruido por el GC.
+        function leerContador() {
+            var i = 0;
+            return function () {
+                alert(++i);
+            }
+        }
+
+        var valorContador = leerContador();
+        alert(leerContador()); // se muestra la función
+        valorContador();  //1
+        valorContador();  //2
+
+        // Si no devolviésemos la función 
+        // el resultado sería "undefined"
+        function variante() {
+            var j = 0; console.log(++j);
+        }
+        variante(); // 0 -> el contexto de ejecución accede a j
+        var v = variante(); // Se evalúa el segundo miembro, que devuelve undefined (nada)
+        v(); // undefined
+        v(); // undefined
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Mustache.js External Method</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="mustache.min.js" ></script>
+    <script>
+      $(document).ready(function(){
+        var view = {
+          name : "Joe",
+          occupation : "Web Developer"
+        };
+
+        $("#templates").load("template.htm #template1",function(){
+          var template = document.getElementById('template1').innerHTML;
+          var output = Mustache.render(template, view);
+          $("#person").html(output);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p id="person"></p>
+    <div id="templates" style="display: none;"></div>
+  </body>
+</html>

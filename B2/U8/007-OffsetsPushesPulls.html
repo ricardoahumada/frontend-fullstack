@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Demos de BootStrap</title>
+    <!-- La funcionalidad básica solo requiere de fichero de estilos -->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style type="text/css">
+        .row { border: 1px solid blue;}
+        [class^='col'] {border: 1px solid red; }
+    </style>
+</head>
+<body>
+<h2 id="modo">Modo actual</h2>
+    <!--Este simple h1 muestra capacidades responsive-->
+    <div class="container">
+        <div class="row">
+            <div class="span12" style="background-color:aqua;">
+                <h1>Rejilla Visual</h1>
+            </div>
+        </div>
+        <!-- Reconfigurar offsets -->
+        <div class="row">
+            <div class="col-md-4">.col-md-4</div>
+            <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+            <div class="col-md-3 col-md-offset-3">.col-md-3 .col-md-offset-3</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">.col-md-6 .col-md-offset-3</div>
+        </div>
+    </div>
+<script src="Scripts/jquery-1.11.2.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script>
+        $(window).bind("resize", function() {
+            if ($(window).width() < 768) {
+                // extra small
+                $("#modo").text("Modo activo: Extra Small");
+            }
+            else if ($(window).width() > 768 && $(window).width() <= 992) {
+                // small
+                $("#modo").text("Modo activo: Small");
+            }
+            else if ($(window).width() > 992 && $(window).width() <= 1200) {
+                // medias
+                $("#modo").text("Modo activo: Medium");
+            }
+            else {
+                // grandes
+                $("#modo").text("Modo activo: Large");
+            }
+        });
+    </script>
+</body>
+</html>

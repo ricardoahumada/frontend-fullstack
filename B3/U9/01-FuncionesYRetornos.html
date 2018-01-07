@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <script>
+        // Problema 1
+        function anular(o) {
+            o = null;
+        }
+        var x = [1];
+        anular(x);
+        alert(x);
+
+        // Problema 2
+        // Escribir una función que recibe un argumento
+        // y devuelve otra función que -a su vez- devuelve 
+        // ese argumento
+        function rf(x) {
+            return function () {
+                return x
+            };
+        }
+        // rf(3) devuelve una función, que se vuelve a llamar
+        var r = rf(3)();
+        alert(r);
+
+        // Problema 3
+        // Escribir una función que reciba un argumento 
+        // y devuelva otra función que recibe otro argumento 
+        // y devuelve la suma de ambos.
+        function addf(x) {
+            return function (y) {
+                return x + y;
+            }
+        }
+        var r = addf(3)(4);
+        alert(r);
+
+        // Problema 4
+        // Escribir una función que reciba una función-de-funcion 
+        // y la haga invocable con dos formas (usando la anterior addf(x)-)
+        function applyf(binary) {
+            return function (x) {
+                return function (y) {
+                    return binary(x, y);
+                }
+            }
+        }
+         alert(applyf(addf)(3)(4)(3)); //devuelve 6
+
+    </script>
+</body>
+</html>

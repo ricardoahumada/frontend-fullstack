@@ -1,0 +1,10 @@
+section > p {
+  background-color: yellow;
+}
+section > p:hover {
+  background-color: blue;
+}
+section div > p {
+  background-color: white;
+  border: 1px solid blue;
+}

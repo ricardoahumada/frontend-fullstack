@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="Estilos/Hoja.css" rel="stylesheet" />
+</head>
+<body>
+    <h3>El objeto this</h3>
+    <script>
+        var miFuncion = function () {
+            console.log(this);
+        }
+
+        miFuncion();
+
+        var miVariable = new miFuncion();
+        alert(typeof miVariable);  // object
+        miVariable();  // Error: miVariable no se puede invocar como función
+    </script>
+</body>
+</html>

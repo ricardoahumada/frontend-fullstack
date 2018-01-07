@@ -1,0 +1,7 @@
+body{font-size: 20px;margin: 5%;}
+div{display: inline-block;background-color: red;height: 100px;margin: 5%;}
+
+header div:first-child{width: 22%;background-color: blue;}
+header div:nth-child(2){width: 54%;background-color: lightblue;}
+
+section div{width: 22%;}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAOA,OAAQ;EANP,qBAAqB,EADM,GAAG;EAE9B,kBAAkB,EAFS,GAAG;EAG9B,aAAa,EAHc,GAAG;EAI7B,SAAS,EAJ4B,GAAG;;AAW1C,GAAI;EAVH,qBAAqB,EAWC,GAAG;EAVzB,kBAAkB,EAUI,GAAG;EATzB,aAAa,EASS,GAAG;EARxB,SAAS,EAQgB,IAAI",
+"sources": ["parametric.scss"],
+"names": [],
+"file": "spstyle.css"
+}

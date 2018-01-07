@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Botones Desplegables</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Principal.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.11.2.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <h2>Botones desplegables</h2>
+    <div class="container-fluid" style="padding-top: 1em;">
+
+        <div class="btn-group">
+            <button type="button" class="btn btn-default dropdown-toggle"
+                    data-toggle="dropdown">
+                Primer botón <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Acción #1</a></li>
+                <li><a href="#">Acción #2</a></li>
+                <li><a href="#">Acción #3</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Acción #4</a></li>
+            </ul>
+        </div>
+
+        <!--Botones desplegables compuestos-->
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger">Segundo botón</button>
+
+            <button type="button" class="btn btn-danger dropdown-toggle"
+                    data-toggle="dropdown">
+                <!--Esto forma el núcleo de despliegue-->
+                <span class="caret"></span>
+                <!--Lo que sigue es para screen readers-->
+                <span class="sr-only">Desplegar menú</span>
+            </button>
+
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Acción #5</a></li>
+                <li><a href="#">Acción #6</a></li>
+                <li><a href="#">Acción #7</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Acción #8</a></li>
+            </ul>
+
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger">Tercer botón</button>
+
+            <button type="button" class="btn btn-danger dropdown-toggle"
+                    data-toggle="dropdown">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                <li><a href="#">Acción #9</a></li>
+                <li><a href="#">Acción #10</a></li>
+                <li role="presentation" class="dropdown-header">Título</li>
+                <li><a href="#">Acción #11</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Acción #12</a></li>
+                <li role="presentation" class="disabled">
+                    <a role="menuitem" tabindex="-1" href="#">Deshabilitado</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

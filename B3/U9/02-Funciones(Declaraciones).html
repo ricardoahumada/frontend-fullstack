@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        // Declaraciones- Expression vs. Declaration
+        // Function declaration
+        function leerContador() {
+            var i = 0;
+            return alert(++i);
+        }
+        leerContador();
+
+        // Function expressions
+        var asignacionContador1 = leerContador;
+        asignacionContador1();
+        var asignacionContador2 = leerContador(); // asignacionContador2 vale undefined
+        //asignacionContador2(); // No produce salida 
+
+        var asignacionContador3 = function () {
+            var j = 4;
+            return alert(++j);
+        }
+
+        asignacionContador3();  // como es una función puede invocarse
+        alert(asignacionContador3) // su contenido, es la función
+
+    </script>
+</body>
+</html>

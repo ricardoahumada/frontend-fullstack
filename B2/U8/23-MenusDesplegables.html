@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Imágenes</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Principal.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.11.2.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <h2>Menus desplegables</h2>
+    <div class="container" style="padding-top: 1em;">
+        <div class="dropdown">
+            <button class="btn dropdown-toggle sr-only" type="button"
+                    id="dropdownMenu1" data-toggle="dropdown">
+                Menú desplegable
+                <span class="caret"></span>
+            </button>
+
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#">Acción</a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#">Otra acción</a>
+                </li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#">Otra acción más</a>
+                </li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation">
+                    <a role="menuitem" tabindex="-1" href="#">Acción separada</a>
+                </li>
+            </ul>
+        </div>
+        <!--Grupos de botones-->
+        <div class="btn-group">
+            <button type="button" class="btn btn-default">Izquierdo</button>
+            <button type="button" class="btn btn-default">Central</button>
+            <button type="button" class="btn btn-default">Derecho</button>
+        </div>
+
+        <!--Botones en la barra de herramientas-->
+        <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default">1</button>
+                <button type="button" class="btn btn-default">2</button>
+                <button type="button" class="btn btn-default">3</button>
+                <button type="button" class="btn btn-default">4</button>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default">5</button>
+                <button type="button" class="btn btn-default">6</button>
+                <button type="button" class="btn btn-default">7</button>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn">8</button>
+            </div>
+        </div>
+        <!--Cambiando el tamaño de los botones-->
+        <div class="btn-group btn-group-lg">
+            <button type="button" class="btn btn-default">1</button>
+            <button type="button" class="btn btn-default">2</button>
+            <button type="button" class="btn btn-default">3</button>
+            <button type="button" class="btn btn-default">4</button>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-default">5</button>
+            <button type="button" class="btn btn-default">6</button>
+            <button type="button" class="btn btn-default">7</button>
+        </div>
+        <div class="btn-group btn-group-sm">
+            <button type="button" class="btn btn-default">5</button>
+            <button type="button" class="btn btn-default">6</button>
+            <button type="button" class="btn btn-default">7</button>
+        </div>
+        <div class="btn-group btn-group-xs">
+            <button type="button" class="btn btn-default">5</button>
+            <button type="button" class="btn btn-default">6</button>
+            <button type="button" class="btn btn-default">7</button>
+        </div>
+        <hr />
+        <!--Anidando grupos de botones-->
+        <div class="btn-group">
+            <button type="button" class="btn btn-default">1</button>
+            <button type="button" class="btn btn-default">2</button>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default dropdown-toggle"
+                        data-toggle="dropdown">
+                    Botón Desplegable
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Enlace #1</a></li>
+                    <li><a href="#">Enlace #2</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+</html>

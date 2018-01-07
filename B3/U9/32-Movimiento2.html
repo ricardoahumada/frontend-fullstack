@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+        #contenedor
+        {
+            position: absolute;
+            width: 90%;
+            height: auto;
+            border: 1px solid red;
+            font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+        }
+
+        #movil
+        {
+            position: relative;
+            margin-left: 20px;
+            border: 2px solid navy;
+            font-family: Fenix;
+            font-size: 1.5em;
+            width: 300px;
+            padding: 10px;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <h1>Simulación de movimiento</h1>
+        <p id="movil">Este párrafo se pondrá en movimiento</p>
+        <button id="Lanzar">Empezar</button>
+        <button id="Terminar">Terminar</button>
+    </div>
+    <script>
+        // Utiliza las nuevas funciones requestAnimationFrame, 
+        // y cancelAnimationFrame. La primera, ejecuta una función 
+        // tan pronto como le es posible. La segunda, cancela el proceso
+        var elem = document.getElementById('movil');
+        var animacion;
+        var pos = 0;
+        function mover() {
+            pos += 1;
+            elem.style.left = pos + 'px';
+
+            animacion = requestAnimationFrame(mover);
+        }
+
+        document.getElementById("Lanzar").onclick = function () {
+            animacion = requestAnimationFrame(mover);
+        }
+        document.getElementById("Terminar").onclick = function () {
+            cancelAnimationFrame(animacion);
+        }
+
+    </script>
+</body>
+</html>

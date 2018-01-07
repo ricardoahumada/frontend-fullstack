@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Efectos avanzados: Listas y descripciones</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        div>div {
+            margin: 12px 0;
+            border:1px solid navy;
+        }
+        .list-inline > li, .list-unstyled > li  {
+            background-color:antiquewhite;
+            padding:5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Formatos de elementos de texto</h2>
+    <hr />
+    <!--Listas no ordenadas-->
+    <div class="container">
+        <h3>Listas desordenadas sencillas</h3>
+        <ul>
+            <li>Primer elemento</li>
+            <li>Segundo elemento</li>
+        </ul>
+        <h3>Listas desordenadas anidadas</h3>
+        <ul class="li">
+            <li>Primer elemento</li>
+            <li>Segundo elemento</li>
+            <li>
+                Este elemento muestra cómo anidar las listas
+                <ul>
+                    <li>Primer elemento de la lista anidada</li>
+                    <li>Segundo elemento de la lista anidada</li>
+                    <li>
+                        Tercer elemento contiene otra lista más
+                        <ul>
+                            <li>Primer elemento</li>
+                            <li>Segundo elemento</li>
+                        </ul>
+                    </li>
+                    <li>Cuarto elemento podemos seguir después de la anidación.
+                    </ul>
+                </li>
+                <li>Último elemento</li>
+            </ul>
+
+            <!--Listas ordenadas-->
+            <ol>
+                <li>Elemento ordenado de la lista</li>
+                <li>Elemento ordenado de la lista</li>
+                <li>Elemento ordenado de la lista</li>
+                <li>Elemento ordenado de la lista</li>
+                <li>Elemento ordenado de la lista</li>
+            </ol>
+
+            <!--Listas sin estilo-->
+            <ul class="list-unstyled">
+                <li>Elementos de lista sin estilo</li>
+                <li>Elementos de lista sin estilo</li>
+                <li>Elementos de lista sin estilo</li>
+                <li>Elementos de lista sin estilo</li>
+            </ul>
+
+            <!--Listas en línea-->
+            <ul class="list-inline">
+                <li>Elemento en línea</li>
+                <li>Elemento en línea</li>
+                <li>Elemento en línea</li>
+            </ul>
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Manejo de Tablas</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+
+    <h2>Paneles (con tablas empotradas y list-groups)</h2>
+    <hr />
+    <div class="container">
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Cabecera de panel sin título</div>
+            <div class="panel-body">
+                Contenido del Panel 
+            </div>
+        </div>
+
+        <!--Las tablas se adaptan al panel (si no se usan con borde)-->
+        <table class="table table-hover">
+            <tr>
+                <td>Datos 1</td>
+                <td>Datos 2</td>
+                <td>Datos 3</td>
+            </tr>         
+            <tr>          
+                <td>Datos 4</td>
+                <td>Datos 5</td>
+                <td>Datos 6</td>
+            </tr>         
+            <tr>          
+                <td>Datos 7</td>
+                <td>Datos 8</td>
+                <td>Datos 9</td>
+            </tr>
+        </table>
+
+        <!--Si el panel no tiene cuerpo->se desplaza directamente a la tabla-->
+        <div class="panel panel-default">
+            <div class="panel-heading">Panel sin título y sin cuerpo</div>
+        </div>
+        <!--table>th+tr*3>td{Datos$}*3-->
+        <table class="table">
+            <tr>
+                <th>Columna1</th>
+                <th>Columna2</th>
+                <th>Columna3</th>
+            </tr>
+            <tr>
+                <td>Datos1</td>
+                <td>Datos2</td>
+                <td>Datos3</td>
+            </tr>
+            <tr>
+                <td>Datos1</td>
+                <td>Datos2</td>
+                <td>Datos3</td>
+            </tr>
+            <tr>
+                <td>Datos1</td>
+                <td>Datos2</td>
+                <td>Datos3</td>
+            </tr>
+        </table>
+    
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Cabecera de panel sin título</div>
+            <div class="panel-body">
+                Contenido del Panel
+            </div>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+    </div>
+</body>
+</html>

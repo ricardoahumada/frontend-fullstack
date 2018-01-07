@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Mustache.js Inline Method</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="mustache.min.js" ></script>
+  </head>
+  <body >
+    <p id="sampleArea"></p>
+  </body>
+
+  <script>
+      var data = { depts: [
+            {   name: "Engineering",
+                employees: [
+                    {firstName: "Christophe", lastName: "Coenraets"},
+                    {firstName: "John", lastName: "Smith"}]
+            },
+            {   name: "Sales",
+                employees: [
+                    {firstName: "Paula", lastName: "Taylor"},
+                    {firstName: "Lisa", lastName: "Jones"}]
+            }]
+        };
+         
+        var tpl = "{{#depts}}<h1>{{name}}</h1>" +
+                  "<ul>{{#employees}}{{>employee}}{{/employees}}</ul>{{/depts}}";
+        var partials = {employee: "<li>{{firstName}} {{lastName}}</li>"};
+        var html = Mustache.to_html(tpl, data, partials);
+        $('#sampleArea').html(html);
+    </script>
+    
+</html>
+

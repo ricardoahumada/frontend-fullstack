@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+		
+		function saluda(texto){return 'Hola '+texto;}
+		function reta(texto){return 'te reto! '+texto;}
+		function miente(texto){return 'te miento '+texto;}
+
+		function ejecutor(un_texto, una_func){
+			console.log( 'Estoy en...'+una_func(un_texto) );
+		}
+
+		ejecutor('Ricardo',saluda);
+		ejecutor('Ricardo',reta);
+		ejecutor('Ricardo',miente);
+
+	</script>
+</body>
+</html>

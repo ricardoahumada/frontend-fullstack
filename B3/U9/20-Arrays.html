@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        // Creación de arrays
+        var elArray = new Array();
+        elArray.push("Luis");
+        elArray.push(24);
+        elArray["Fecha"] = new Date();
+        elArray["Fecha2"] = elArray.Fecha.getDate();
+
+        elArray.forEach(function (elemento) {
+            alert(elemento)
+        });
+
+        // push y pop almacenan y leen de la pila de datos, 
+        // mientras que con la sintaxis de array [] se crea un miembro separado
+        alert("La persona " + elArray.pop() + " tiene " + elArray.pop() + " años.");
+
+        elArray2 = ["Adrian", 23, new Date(1990, 6, 12)];
+        elArray2.forEach(function (elemento) {
+            alert(elemento)
+        });
+    </script>
+</body>
+</html>

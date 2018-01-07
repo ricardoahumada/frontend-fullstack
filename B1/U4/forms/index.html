@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<h1>Una pagina de formulario</h1>
+
+	<div>
+		<p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto repellat eum harum doloremque numquam, distinctio quaerat, voluptates ipsum eaque odio ducimus quasi molestias non provident facere animi quam iste odit.</p>
+	</div>
+
+	<section>
+		<form action="direccion_envio.html" method="GET" autocomplete="off">
+
+			
+			<div>
+				<label for="idnombre">Tu nombre</label>
+				<input type="text" name="nombre" id="idnombre" placeholder="nombre" value="Ric" maxlength="30" pattern="[A-Z][a-z]*"  spellcheck>
+			</div>
+
+			<div>
+				<label for="idedad">Tu edad</label>
+				<input type="number" name="edad" id="idedad" placeholder="Tu edad" min="14" max="99" autofocus>
+			</div>
+
+			<div>
+				<label for="idemail">Tu Email</label>
+				<input type="email" name="email" id="idemail" placeholder="email" required="true">
+			</div>
+
+			<div>
+				<label for="idvida">Tu vida</label>
+				<textarea name="vida" id="idvida"></textarea>
+			</div>
+			
+			<div>
+				<label for="idempl">Num empleados</label>
+				<select name="empleados" id="idempl" >
+					<option value="2345">Arturo</option>
+					<option value="1345" selected="true">Ginebra</option>
+					<option value="9876">Lancelot</option>
+				</select>
+			</div>
+
+			<div>
+				<h3>Tu color favorito:</h3>
+				<div>
+					<label for="idrojo">rojo</label>
+					<input type="checkbox" name="color" id="idrojo" value="rojo">
+				</div>
+				<div>
+					<label for="idazul">azul</label>
+					<input type="checkbox" name="color" id="idazul" value="rojo">
+				</div>
+				<div>
+					<label for="idverde">verde</label>
+					<input type="checkbox" name="color" id="idverde" value="rojo">
+				</div>
+			</div>
+
+
+			<div>
+				<h3>Tu color favorito:</h3>
+				<div>
+					<label for="idrojor">rojo</label>
+					<input type="radio" name="color" id="idrojor" value="rojo">
+				</div>
+				<div>
+					<label for="idazulr">azul</label>
+					<input type="radio" name="color" id="idazulr" value="rojo">
+				</div>
+				<div>
+					<label for="idverder">verde</label>
+					<input type="radio" name="color" id="idverde"r value="rojo">
+				</div>
+			</div>
+
+
+			<button>Enviar</button>
+		</form>
+	</section>
+
+</body>
+</html>

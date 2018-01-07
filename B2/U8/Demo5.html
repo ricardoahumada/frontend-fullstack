@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Demos de BootStrap</title>
+    <!-- La funcionalidad básica solo requiere de fichero de estilos -->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Este simple h1 muestra capacidades responsive-->
+    <div class="container">
+        <div class="row">
+            <div class="span12" style="background-color:aqua;">
+                <h1>Rejilla Visual</h1>
+            </div>
+        </div>
+        <!-- Si se colocan + de 12 columnas en una fila, las restantes se comportan como
+            un grupo y se desplazan a la línea siguiente. -->
+        <div class="row">
+            <div class="col-xs-9" style="background-color:#e5b6de;">.col-xs-9</div>
+            <div class="col-xs-4" style="background-color:aqua;">.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+            <div class="col-xs-6" style="background-color:#ffd800;">.col-xs-6<br>Subsequent columns continue along the new line.</div>
+        </div>
+    </div>
+
+</body>
+</html>

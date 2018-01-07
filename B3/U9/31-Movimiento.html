@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="Estilos/Hoja.css" rel="stylesheet" />
+    <style>
+        #contenedor
+        {
+            position: absolute;
+            width: 90%;
+            height: auto;
+            border: 1px solid red;
+        }
+
+        #movil
+        {
+            position: relative;
+            margin-left: 20px;
+            border: 2px solid navy;
+            font-size: 1.5em;
+            width: 300px;
+            padding: 10px;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <button id="Terminar" onclick="clearTimeout(manejador);">Terminar</button>
+       <h1>Simulación de movimiento y cancelación de temporizadores</h1>
+        <p id="movil">Este párrafo se pondrá en movimiento</p>
+    </div>
+    <script>
+
+
+        var elem = null; // el elemento a mover
+        var manejador; // para poder controlar el método setTimeout
+        function mover() {
+            elem.style.left = parseInt(elem.style.left) + 1 + 'px';
+            manejador = setTimeout(mover, 20); // se llama cada 20msec
+        }
+
+        function iniciar() {
+            elem = document.getElementById('movil'); // el elemento a mover
+            elem.style.left = '0px'; // posicion inicial en 0px
+            mover(); // comienza la animación
+        }
+        window.onload = iniciar();
+    </script>
+</body>
+</html>

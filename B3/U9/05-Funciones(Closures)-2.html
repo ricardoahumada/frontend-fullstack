@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        // Closures
+        // La salida del ejemplo es undefined porque la "parada"
+        // que supone setTimeout hace que el bucle ya haya terminado 
+        // para cuando se accede al valor.
+        var colores = ["Azul", "Verde", "Rojo", "Amarillo"];
+        for (var i = 0; i < colores.length; i++) {
+            setTimeout(function () {
+                console.log(colores);
+                console.log(i);
+                console.log(colores[i]);
+            }, 200);
+        }
+
+        var masColores = ["Blanco", "Purpura", "Negro", "Gris"];
+        for (var i = 0; i < masColores.length; i++) {
+            setTimeout( (function (i) {
+                return function () {
+                    console.log(masColores);
+                    console.log(i);
+                    console.log(masColores[i]);
+                } 
+            })(i), 200);
+        }
+
+    </script>
+</body>
+</html>

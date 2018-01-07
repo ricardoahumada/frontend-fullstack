@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        // Modularidad y ámbito de variables
+        (function () {
+            var variableLocal = "Esto es local por el contexto de la función";
+            nolocal = "Esto pasa a pertenecer a Global"; //falta -var-
+            noLocalAsignada = function () {  // funcion "exportada" pero "ve" su contenedor
+                console.log(variableLocal);
+                return variableLocal;
+            }
+        })();
+
+        typeof noLocalAsignada; // function
+        typeof noLocalAsignada(); // string
+    </script>
+</body>
+</html>
